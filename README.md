@@ -6,12 +6,11 @@
 
 轻量、自托管的 Linux 日志检测与永久 IP 封禁工具。
 
-[![CI](https://github.com/yangjh0127/f2block/actions/workflows/ci.yml/badge.svg)](https://github.com/yangjh0127/f2block/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/platform-Linux-FCC624?logo=linux&logoColor=black)](#快速开始)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
-[快速开始](#快速开始) · [使用指南](docs/operations.md) · [配置示例](config.example.json) · [贡献指南](CONTRIBUTING.md)
+[快速开始](#快速开始) · [配置示例](config.example.json) · [许可证](LICENSE)
 
 </div>
 
@@ -116,18 +115,9 @@ sudo f2block status --json
 | `/var/lib/f2block/f2block.db` | 名单、事件、读取位置与查询状态 |
 | `/var/lib/f2block/geo/lookup.geo` | 压缩地理库 |
 
-参考 [配置示例](config.example.json) 和 [完整使用指南](docs/operations.md)，了解自定义规则、日志轮转、迁移、升级、故障检查及卸载。
+通过 [配置示例](config.example.json) 自定义规则；修改后执行 `sudo f2block service restart`。
 
 f2block 管理本机 **INPUT 入站流量**，不承担带宽型 DDoS 清洗。反向代理或 CDN 后应先确认日志记录的是可信的真实客户端 IP。永久封禁需要结合白名单和人工复核使用。
-
-## 开发与贡献
-
-```bash
-python3 -m unittest test_geo test_enrich test_manage_features \
-  test_direct_logs test_runtime test_management -v
-```
-
-测试使用隔离数据库和模拟防火墙操作，不需要连接真实服务器。欢迎通过 [Issues](https://github.com/yangjh0127/f2block/issues) 报告问题或提交改进，参与前请阅读 [贡献指南](CONTRIBUTING.md) 和 [安全报告说明](SECURITY.md)。
 
 ## 许可证与数据来源
 
