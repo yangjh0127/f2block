@@ -1,0 +1,31 @@
+name: 缺陷报告
+description: 提交一个可复现的问题，帮助改进 f2block。
+body:
+  - type: markdown
+    attributes:
+      value: 请先脱敏。不要上传数据库、真实 IP 名单、密钥、个人信息或完整服务器日志。安全漏洞请先阅读 SECURITY.md。
+  - type: textarea
+    id: environment
+    attributes:
+      label: 运行环境
+      description: 系统版本、Python 版本、提交或版本号。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 最小复现步骤
+      description: 使用文档 IP 和虚构日志说明如何触发。
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 预期与实际行为
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: 已脱敏的诊断信息
+      description: 仅附必要片段，请隐藏服务器地址、用户名和 IP。

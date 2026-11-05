@@ -1,0 +1,4 @@
+#!/bin/bash
+# Compatibility entry point. Detection and management no longer require Fail2Ban.
+SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+exec python3 "$SCRIPT_DIR/f2block_cli.py" "$@"

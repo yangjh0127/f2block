@@ -1,0 +1,50 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.db-shm
+*.db-wal
+*.db-journal
+adversarial_runs/**/*.events.jsonl
+adversarial_runs/**/*.stderr.log
+adversarial_runs/**/*.prompt.md
+deployment/**/*.tar.gz
+.daemon.lock
+.operations.lock
+
+# Local runtime data and downloaded geographic databases
+*.db
+*.sqlite
+*.sqlite3
+*.mmdb
+*.geo
+geo/
+backups/
+
+# Host-specific deployment records and generated evaluation artifacts
+deployment/
+adversarial_runs/
+*.log
+*.exit
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+config.json
+*.pem
+*.key
+
+# Archived experiments kept locally, outside the distributable project
+test_luna_round*.py
+test_wsl_adversarial_round*.py
+test_adversarial*.py
+test_ipv6.py
+ADVERSARIAL_TEST_REPORT.md
+WSL_ADVERSARIAL_TEST_REPORT_*.md
+f2block_delivery.py
+f2block_jail.py

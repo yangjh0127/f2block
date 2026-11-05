@@ -1,0 +1,17 @@
+[Unit]
+Description=Local Log Threat Detector and Permanent IP Blocker
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Environment=F2BLOCK_CONFIG=/etc/f2block/config.json
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/f2block/f2blockd
+Restart=always
+RestartSec=5
+TimeoutStopSec=90
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
